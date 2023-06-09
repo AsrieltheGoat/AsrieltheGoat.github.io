@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP");
+@import url("/animations.css");
+@import url("/navbar.css");
+@import url("/scroll-bar.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    font-family: "ヒラギノ角ゴ Pro W3", sans-serif;
+    text-decoration: none;
+}
+
+/* Sections */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+}
+
+@supports (scroll-snap-align: start) {
+    .container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}
+
+/* Container section */
+.container {
+    background: #d5af9f;
+}
+
+.title {
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.text {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 20px;
+    max-width: 85%;
+}
+
+hr {
+    width: 100px;
+    border: 5px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Sections */
+.one svg {
+    position: relative;
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    animation: lumine 2.5s ease-in-out forwards;
+    margin: 10px;
+}
+
+.two {
+    flex-direction: column;
+    text-align: center;
+}
+
+.three {
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .one {
+        flex-direction: column;
+        text-align: center;
+    }
+}
